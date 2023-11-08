@@ -145,7 +145,7 @@ class _SavedWardsState extends State<AnotherWordsScreen> {
                                                       if(deletedRwa != -1){
                                                         setState(() {
                                                           ScaffoldMessenger.of(context).showSnackBar
-                                                            (SnackBar(content: Text('تم الحذف')));
+                                                            (const SnackBar(content: Text('تم الحذف')));
                                                         });
                                                       }
 
@@ -186,7 +186,7 @@ class _SavedWardsState extends State<AnotherWordsScreen> {
                                               child:   Row(
                                                 children: [
 
-                                                  SizedBox(
+                                                  const   SizedBox(
                                                     width: 3,
                                                   ),
                                                   InkWell(
@@ -199,7 +199,7 @@ class _SavedWardsState extends State<AnotherWordsScreen> {
                                                         if(x != -1){
                                                           setState(() {
                                                             ScaffoldMessenger.of(context).showSnackBar(
-                                                                SnackBar(content: Text('تمت ازالتها'))
+                                                                const  SnackBar(content: Text('تمت ازالتها'))
                                                             );
                                                           });
                                                         }
@@ -211,13 +211,13 @@ class _SavedWardsState extends State<AnotherWordsScreen> {
                                                           setState(() {
 
                                                             ScaffoldMessenger.of(context).showSnackBar(
-                                                                SnackBar(content: Text('تمت الاضافة للمفضلة')));
+                                                              const  SnackBar(content: Text('تمت الاضافة للمفضلة')));
                                                           });
                                                         }
                                                       }
 
                                                     },
-                                                    child: Text(
+                                                    child: const Text(
                                                       "أضف للمفضلة",
                                                       style: TextStyle(
                                                         fontSize: 12,
@@ -232,49 +232,49 @@ class _SavedWardsState extends State<AnotherWordsScreen> {
                                       const SizedBox(
                                         height: 7,
                                       ),
-                                      Stack(
+                                    const  Stack(
                                         children: [
-                                          Container(
-                                              width: MediaQuery.of(context).size.width * 0.30,
-                                              height:
-                                              MediaQuery.of(context).size.height * 0.05,
-                                              decoration: BoxDecoration(
-                                                color: const Color(0xFF2F2F42),
-                                                borderRadius: BorderRadius.circular(20),
-                                                boxShadow: const [
-                                                  BoxShadow(
-                                                    color: Color(0xFF20202D),
-                                                    spreadRadius: 0.7,
-                                                    offset: Offset(-0.1, -0.1),
-                                                    blurStyle: BlurStyle.solid,
-                                                  ),
-                                                ],
-                                              ),
-                                              child: InkWell(
-                                                onTap: () {
-                                                  AudioPlayer player = AudioPlayer();
-                                                  Source path = AssetSource(dataList[i]['sound']);
-                                                  player.play(path);
-                                                },
-                                                child: const Row(
-                                                  children: [
-                                                    Icon(
-                                                      Icons.play_circle_outline,
-                                                      color: Colors.red,
-                                                    ),
-                                                    SizedBox(
-                                                      width: 3,
-                                                    ),
-                                                    Text(
-                                                      "قراءة الكلمة",
-                                                      style: TextStyle(
-                                                        fontSize: 12,
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              )),
+                                          // Container(
+                                          //     width: MediaQuery.of(context).size.width * 0.30,
+                                          //     height:
+                                          //     MediaQuery.of(context).size.height * 0.05,
+                                          //     decoration: BoxDecoration(
+                                          //       color: const Color(0xFF2F2F42),
+                                          //       borderRadius: BorderRadius.circular(20),
+                                          //       boxShadow: const [
+                                          //         BoxShadow(
+                                          //           color: Color(0xFF20202D),
+                                          //           spreadRadius: 0.7,
+                                          //           offset: Offset(-0.1, -0.1),
+                                          //           blurStyle: BlurStyle.solid,
+                                          //         ),
+                                          //       ],
+                                          //     ),
+                                          //     child: InkWell(
+                                          //       onTap: () {
+                                          //         AudioPlayer player = AudioPlayer();
+                                          //         Source path = AssetSource(dataList[i]['sound']);
+                                          //         player.play(path);
+                                          //       },
+                                          //       child: const Row(
+                                          //         children: [
+                                          //           Icon(
+                                          //             Icons.play_circle_outline,
+                                          //             color: Colors.red,
+                                          //           ),
+                                          //           SizedBox(
+                                          //             width: 3,
+                                          //           ),
+                                          //           Text(
+                                          //             "قراءة الكلمة",
+                                          //             style: TextStyle(
+                                          //               fontSize: 12,
+                                          //               color: Colors.white,
+                                          //             ),
+                                          //           ),
+                                          //         ],
+                                          //       ),
+                                          //     )),
                                         ],
                                       ),
                                     ],

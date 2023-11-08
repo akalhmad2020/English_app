@@ -246,49 +246,49 @@ class _SavedWardsState extends State<SavedWards> {
                                     const SizedBox(
                                       height: 7,
                                     ),
-                                    Stack(
+                           const         Stack(
                                       children: [
-                                        Container(
-                                            width: MediaQuery.of(context).size.width * 0.30,
-                                            height:
-                                            MediaQuery.of(context).size.height * 0.05,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0xFF2F2F42),
-                                              borderRadius: BorderRadius.circular(20),
-                                              boxShadow: const [
-                                                BoxShadow(
-                                                  color: Color(0xFF20202D),
-                                                  spreadRadius: 0.7,
-                                                  offset: Offset(-0.1, -0.1),
-                                                  blurStyle: BlurStyle.solid,
-                                                ),
-                                              ],
-                                            ),
-                                            child: InkWell(
-                                              onTap: () {
-                                                AudioPlayer player = AudioPlayer();
-                                                Source path = AssetSource(dataList[i]['sound']);
-                                                player.play(path);
-                                              },
-                                              child: const Row(
-                                                children: [
-                                                  Icon(
-                                                    Icons.play_circle_outline,
-                                                    color: Colors.red,
-                                                  ),
-                                                  SizedBox(
-                                                    width: 3,
-                                                  ),
-                                                  Text(
-                                                    "قراءة الكلمة",
-                                                    style: TextStyle(
-                                                      fontSize: 12,
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            )),
+                                        // Container(
+                                        //     width: MediaQuery.of(context).size.width * 0.30,
+                                        //     height:
+                                        //     MediaQuery.of(context).size.height * 0.05,
+                                        //     decoration: BoxDecoration(
+                                        //       color: const Color(0xFF2F2F42),
+                                        //       borderRadius: BorderRadius.circular(20),
+                                        //       boxShadow: const [
+                                        //         BoxShadow(
+                                        //           color: Color(0xFF20202D),
+                                        //           spreadRadius: 0.7,
+                                        //           offset: Offset(-0.1, -0.1),
+                                        //           blurStyle: BlurStyle.solid,
+                                        //         ),
+                                        //       ],
+                                        //     ),
+                                        //     child: InkWell(
+                                        //       onTap: () {
+                                        //         AudioPlayer player = AudioPlayer();
+                                        //         Source path = AssetSource(dataList[i]['sound']);
+                                        //         player.play(path);
+                                        //       },
+                                        //       child: const Row(
+                                        //         children: [
+                                        //           Icon(
+                                        //             Icons.play_circle_outline,
+                                        //             color: Colors.red,
+                                        //           ),
+                                        //           SizedBox(
+                                        //             width: 3,
+                                        //           ),
+                                        //           Text(
+                                        //             "قراءة الكلمة",
+                                        //             style: TextStyle(
+                                        //               fontSize: 12,
+                                        //               color: Colors.white,
+                                        //             ),
+                                        //           ),
+                                        //         ],
+                                        //       ),
+                                        //     )),
                                       ],
                                     ),
                                   ],

@@ -6,10 +6,13 @@ import 'package:english_app/screens/exam.dart';
 import 'package:english_app/screens/saved_words.dart';
 import 'package:english_app/screens/words.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 import '../widget/cardpart.dart';
 import '../widget/sections.dart';
+
+
 
 class Home1 extends StatefulWidget {
 
@@ -67,9 +70,14 @@ class _Home1State extends State<Home1> {
 
     super.initState();
   }
+
+  Future<bool?> setValueToIsFinished (int e) async{
+    SharedPreferences shared = await  SharedPreferences.getInstance() ;
+    bool? x =   shared.getBool('${e}group');
+    return x;
+  }
   @override
   Widget build(BuildContext context) {
-
 
 
     return Scaffold(
@@ -124,7 +132,7 @@ class _Home1State extends State<Home1> {
                         child: ListView.builder(
                             scrollDirection: Axis.horizontal,
                             itemCount: 20,
-                            itemBuilder: (context, index) {
+                            itemBuilder: (context, index)  {
                               return InkWell(
                                 onTap: () {
                                   Navigator.push(context,
